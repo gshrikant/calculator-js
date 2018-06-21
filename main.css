@@ -1,0 +1,46 @@
+/* Clippy Calculator */
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.calculator {
+    border: 0.25px solid black;
+}
+
+input {
+    padding: 16px;
+    width: 100%;
+    font-size: 20px;
+    border: none;
+    font-family: 'Muli';
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-gap: 2px;
+    border-top: 0.25px solid black;
+}
+
+.button {
+    background-color: #eeeeee; 
+    color: black;
+    padding: 20px;
+    font-size: 200%;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+}
+
+#equals {
+    background-color: #0095dd;
+    color: white;
+}
+
+#title {
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+}
