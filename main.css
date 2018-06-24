@@ -17,6 +17,8 @@ input {
     font-size: 20px;
     border: none;
     font-family: 'Muli';
+    background-color: white;
+    color: black;
 }
 
 .container {
