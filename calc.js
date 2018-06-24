@@ -72,7 +72,7 @@ function main() {
     document.addEventListener("keydown", function(event) {
         if (ALLOWED_KEYS.includes(event.key)) {
             textField.focus();
-        } else if (event.key == EVAL_KEY) {
+        } else if (event.key == EVAL_KEY || event.key == "Enter") {
             evaluate(textField.value);
         } else if (event.key.toLowerCase() == CLEAR_KEY) {
             reset();
