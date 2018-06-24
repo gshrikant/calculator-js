@@ -22,8 +22,17 @@ function show(id, text) {
 }
 
 function evaluate(estr) {
+    // This monstrosity matches a 0 before another non-zero
+    // digit character when such a number occurs near the
+    // start of a string or next to a non-digit character,
+    // essentially filtering out octal representations.
+    const octalFilter = /(^|\D)0([1-9]+)/g;
+
+    // Use 2nd capture group.
+    estr = estr.replace(octalFilter, "$2");
     estr = estr.replace(/÷/g, "/");
     estr = estr.replace(/×/g, "*");
+
     try {
         reset();
         let result = eval(estr);
