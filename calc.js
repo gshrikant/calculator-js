@@ -28,8 +28,7 @@ function evaluate(estr) {
     // essentially filtering out octal representations.
     const octalFilter = /(^|\D)0([1-9]+)/g;
 
-    // Use 2nd capture group.
-    estr = estr.replace(octalFilter, "$2");
+    estr = estr.replace(octalFilter, "$1$2");
     estr = estr.replace(/÷/g, "/");
     estr = estr.replace(/×/g, "*");
 
