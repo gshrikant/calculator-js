@@ -21,7 +21,7 @@ input {
 
 .container {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 2px;
     border-top: 0.25px solid black;
 }
