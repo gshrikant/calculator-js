@@ -36,7 +36,7 @@ function evaluate(estr) {
     try {
         reset();
         let result = eval(estr);
-        if (result != "undefined" && result != "NaN")
+        if (result != "undefined" && result != "NaN" && result != "Infinity")
             textField.value = result;
     } catch (e) {
         console.log("Invalid expression");
